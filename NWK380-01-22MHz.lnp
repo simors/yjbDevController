@@ -1,0 +1,5 @@
+"STARTUP.obj",
+"NWK.obj",
+".\GSMFUNC.OBJ" 
+TO "NWK380-01-22MHz" 
+RAMSIZE(256) 

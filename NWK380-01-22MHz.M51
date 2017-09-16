@@ -1,0 +1,601 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        06/03/2017  08:39:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, NWK.obj, .\GSMFUNC.OBJ TO NWK380-01-22MHz RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  NWK.obj (NWK)
+  .\GSMFUNC.OBJ (GSMFUNC)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?IILDX)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ILDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LMUL)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?OFFXADD)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL\C51\LIB\C51S.LIB (PUTCHAR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?STRCMP)
+
+
+LINK MAP OF MODULE:  NWK380-01-22MHz (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
+            DATA    0010H     0005H     UNIT         ?DT?GSMFUNC
+                    0015H     0003H                  *** GAP ***
+            REG     0018H     0008H     ABSOLUTE     "REG BANK 3"
+            DATA    0020H     0006H     BIT_ADDR     ?BA?NWK
+            BIT     0026H.0   0003H.4   UNIT         ?BI?NWK
+            BIT     0029H.4   0001H.3   UNIT         _BIT_GROUP_
+            BIT     002AH.7   0000H.1   UNIT         ?BI?GSMFUNC
+            DATA    002BH     0029H     UNIT         _DATA_GROUP_
+            DATA    0054H     001FH     UNIT         ?DT?NWK
+            IDATA   0073H     0023H     UNIT         ?ID?GSMFUNC
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 2
+
+
+            IDATA   0096H     0019H     UNIT         ?ID?NWK
+            IDATA   00AFH     000BH     UNIT         _IDATA_GROUP_
+            IDATA   00BAH     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     0A16H     UNIT         ?XD?NWK
+            XDATA   0A16H     01CBH     UNIT         ?XD?GSMFUNC
+            XDATA   0BE1H     0014H     UNIT         _XDATA_GROUP_
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0001H     UNIT         ?PR?RXUDPDATAPRO?NWK
+                    0004H     0007H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0015H     UNIT         ?PR?_TCPAPP?GSMFUNC
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     183EH     UNIT         ?CO?NWK
+            CODE    1864H     0F93H     UNIT         ?PR?RDSMSPRO?NWK
+            CODE    27F7H     08FCH     UNIT         ?C?LIB_CODE
+            CODE    30F3H     08B6H     UNIT         ?PR?ANALOGDIGITALCHANGE?NWK
+            CODE    39A9H     082CH     UNIT         ?C_INITSEG
+            CODE    41D5H     080EH     UNIT         ?PR?RXDPRO?GSMFUNC
+            CODE    49E3H     07DDH     UNIT         ?PR?TOSHOWBUFFER?NWK
+            CODE    51C0H     06FEH     UNIT         ?PR?INCFUN?NWK
+            CODE    58BEH     0680H     UNIT         ?PR?DECFUN?NWK
+            CODE    5F3EH     0669H     UNIT         ?PR?LOADTCPDAT?NWK
+            CODE    65A7H     05DEH     UNIT         ?PR?SMS_CY_LOAD?NWK
+            CODE    6B85H     0555H     UNIT         ?PR?RXTCPDATAPRO?NWK
+            CODE    70DAH     0522H     UNIT         ?PR?MAIN?NWK
+            CODE    75FCH     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    7A6BH     0461H     UNIT         ?PR?LONGTIME?NWK
+            CODE    7ECCH     043FH     UNIT         ?PR?TXDLOAD?GSMFUNC
+            CODE    830BH     02E8H     UNIT         ?PR?SMS_CP_LOAD?NWK
+            CODE    85F3H     02CDH     UNIT         ?PR?SMS_CH_LOAD?NWK
+            CODE    88C0H     02BBH     UNIT         ?PR?WORK?NWK
+            CODE    8B7BH     0250H     UNIT         ?PR?RDWARN?NWK
+            CODE    8DCBH     0238H     UNIT         ?CO?GSMFUNC
+            CODE    9003H     021FH     UNIT         ?PR?SMS_WH_LOAD?NWK
+            CODE    9222H     021CH     UNIT         ?PR?SMS_CL_LOAD?NWK
+            CODE    943EH     01D6H     UNIT         ?PR?_STRUNICODE?GSMFUNC
+            CODE    9614H     01D0H     UNIT         ?PR?KEYPROCESS?NWK
+            CODE    97E4H     01BEH     UNIT         ?PR?SMS_CM_LOAD?NWK
+            CODE    99A2H     016EH     UNIT         ?PR?_LOADSMSRTSDATA?NWK
+            CODE    9B10H     0157H     UNIT         ?PR?T0OVR?NWK
+            CODE    9C67H     014EH     UNIT         ?PR?_LOADSENDSMS?GSMFUNC
+            CODE    9DB5H     0145H     UNIT         ?PR?_FINDSTR?GSMFUNC
+            CODE    9EFAH     0143H     UNIT         ?PR?_DATAPACK?NWK
+            CODE    A03DH     012DH     UNIT         ?PR?PACKLEADPRO?NWK
+            CODE    A16AH     0119H     UNIT         ?PR?_GETSMSMSG?GSMFUNC
+            CODE    A283H     0110H     UNIT         ?PR?TXDPROCESS?NWK
+            CODE    A393H     0104H     UNIT         ?PR?_FINDSTRING?GSMFUNC
+            CODE    A497H     00FCH     UNIT         ?PR?_GETSECTION?GSMFUNC
+            CODE    A593H     00F0H     UNIT         ?PR?TOZJBUF?NWK
+            CODE    A683H     00BEH     UNIT         ?PR?RXTIMEOVER?NWK
+            CODE    A741H     00AFH     UNIT         ?PR?SMSWARNLOAD?NWK
+            CODE    A7F0H     00ADH     UNIT         ?PR?_GETBREAK?NWK
+            CODE    A89DH     00ADH     UNIT         ?PR?_CHRSWAP?GSMFUNC
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 3
+
+
+            CODE    A94AH     00A4H     UNIT         ?PR?_GETHEX?NWK
+            CODE    A9EEH     008CH     UNIT         ?C_C51STARTUP
+            CODE    AA7AH     0087H     UNIT         ?PR?AFFIRMADJUST?NWK
+            CODE    AB01H     0087H     UNIT         ?PR?_SHOW?NWK
+            CODE    AB88H     0087H     UNIT         ?PR?_GETDIGITALSTR?GSMFUNC
+            CODE    AC0FH     0084H     UNIT         ?PR?SMSIDSHIFT?GSMFUNC
+            CODE    AC93H     0082H     UNIT         ?PR?SMS_OFF_LOAD?NWK
+            CODE    AD15H     0082H     UNIT         ?PR?SMS_ON_LOAD?NWK
+            CODE    AD97H     0079H     UNIT         ?PR?SCANEKEY?NWK
+            CODE    AE10H     0074H     UNIT         ?PR?RTSDATA?NWK
+            CODE    AE84H     006EH     UNIT         ?PR?SMSRTSDATLOAD?NWK
+            CODE    AEF2H     006AH     UNIT         ?PR?_SMSIDAPPEND?GSMFUNC
+            CODE    AF5CH     0053H     UNIT         ?PR?UART?GSMFUNC
+            CODE    AFAFH     0051H     UNIT         ?PR?_GETSTR?NWK
+            CODE    B000H     004FH     UNIT         ?PR?_HEXTOBCD?NWK
+            CODE    B04FH     004DH     UNIT         ?PR?SAVEDATA?NWK
+            CODE    B09CH     0048H     UNIT         ?PR?_MSGBUF?NWK
+            CODE    B0E4H     0047H     UNIT         ?PR?TM1640END?NWK
+            CODE    B12BH     0047H     UNIT         ?PR?_TM1640WRITE?NWK
+            CODE    B172H     0040H     UNIT         ?PR?SAVEPHONE?NWK
+            CODE    B1B2H     003CH     UNIT         ?PR?KEYORDERPRO?NWK
+            CODE    B1EEH     003AH     UNIT         ?PR?DATATOTM1640RAM?NWK
+            CODE    B228H     0039H     UNIT         ?PR?TM1640START?NWK
+            CODE    B261H     0036H     UNIT         ?PR?SMS_CS_LOAD?NWK
+            CODE    B297H     0033H     UNIT         ?PR?_LEN?GSMFUNC
+            CODE    B2CAH     002EH     UNIT         ?PR?_WREEPROM?NWK
+            CODE    B2F8H     002DH     UNIT         ?PR?_QUEUEPRO?GSMFUNC
+            CODE    B325H     002DH     UNIT         ?PR?_STRCHRNUM?GSMFUNC
+            CODE    B352H     002BH     UNIT         ?PR?PHONEPRO?NWK
+            CODE    B37DH     0027H     UNIT         ?PR?_RDEEPROM?NWK
+            CODE    B3A4H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    B3CBH     0021H     UNIT         ?PR?_STCADC?NWK
+            CODE    B3ECH     0021H     UNIT         ?PR?_APPEND?GSMFUNC
+            CODE    B40DH     001EH     UNIT         ?PR?_DIGLEN?NWK
+            CODE    B42BH     001DH     UNIT         ?PR?_ERASEEEPROM?NWK
+            CODE    B448H     0019H     UNIT         ?PR?NEXTTCP?GSMFUNC
+            CODE    B461H     000AH     UNIT         ?PR?_NEXTSEND?NWK
+
+
+
+OVERLAY MAP OF MODULE:   NWK380-01-22MHz (?C_STARTUP)
+
+
+SEGMENT                                BIT_GROUP          DATA_GROUP          IDATA_GROUP         XDATA_GROUP
+  +--> CALLED SEGMENT               START    LENGTH     START    LENGTH     START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------------------------------------------
+?C_C51STARTUP                       -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?MAIN?NWK
+  +--> ?C_INITSEG
+
+?PR?MAIN?NWK                        -----    -----      002BH    0001H      -----    -----      -----    -----
+  +--> ?PR?_RDEEPROM?NWK
+  +--> ?CO?NWK
+  +--> ?PR?PACKLEADPRO?NWK
+  +--> ?PR?_TCPAPP?GSMFUNC
+  +--> ?PR?PHONEPRO?NWK
+  +--> ?PR?TOSHOWBUFFER?NWK
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 4
+
+
+  +--> ?PR?TOZJBUF?NWK
+  +--> ?PR?DATATOTM1640RAM?NWK
+  +--> ?PR?SCANEKEY?NWK
+  +--> ?PR?KEYPROCESS?NWK
+  +--> ?PR?ANALOGDIGITALCHANGE?NWK
+  +--> ?PR?WORK?NWK
+  +--> ?PR?SAVEDATA?NWK
+  +--> ?PR?SAVEPHONE?NWK
+  +--> ?PR?LONGTIME?NWK
+  +--> ?PR?RDWARN?NWK
+  +--> ?PR?TXDPROCESS?NWK
+  +--> ?PR?RXDPRO?GSMFUNC
+  +--> ?PR?TXDLOAD?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PACKLEADPRO?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PRINTF?PRINTF                   0029H.6  0001H.1    0038H    001CH      -----    -----      -----    -----
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?TOSHOWBUFFER?NWK                -----    -----      002CH    0003H      -----    -----      -----    -----
+  +--> ?PR?_SHOW?NWK
+  +--> ?PR?_HEXTOBCD?NWK
+  +--> ?CO?NWK
+
+?PR?_SHOW?NWK                       0029H.4  0000H.1    002FH    0005H      -----    -----      -----    -----
+  +--> ?CO?NWK
+
+?PR?_HEXTOBCD?NWK                   -----    -----      002FH    0002H      -----    -----      -----    -----
+  +--> ?CO?NWK
+
+?PR?TOZJBUF?NWK                     -----    -----      002CH    0002H      -----    -----      -----    -----
+  +--> ?PR?_SHOW?NWK
+  +--> ?CO?NWK
+
+?PR?DATATOTM1640RAM?NWK             -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?TM1640START?NWK
+  +--> ?PR?_TM1640WRITE?NWK
+  +--> ?PR?TM1640END?NWK
+  +--> ?CO?NWK
+
+?PR?KEYPROCESS?NWK                  -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?AFFIRMADJUST?NWK
+  +--> ?PR?INCFUN?NWK
+  +--> ?PR?DECFUN?NWK
+  +--> ?PR?KEYORDERPRO?NWK
+
+?PR?AFFIRMADJUST?NWK                -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?_ERASEEEPROM?NWK
+  +--> ?PR?_WREEPROM?NWK
+
+?PR?KEYORDERPRO?NWK                 -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?_ERASEEEPROM?NWK
+  +--> ?PR?_APPEND?GSMFUNC
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 5
+
+
+
+?PR?_APPEND?GSMFUNC                 -----    -----      -----    -----      00B5H    0001H      -----    -----
+
+?PR?ANALOGDIGITALCHANGE?NWK         -----    -----      -----    -----      -----    -----      0BE1H    0007H
+  +--> ?CO?NWK
+  +--> ?PR?_STCADC?NWK
+
+?PR?SAVEDATA?NWK                    -----    -----      002CH    0002H      -----    -----      -----    -----
+  +--> ?PR?_ERASEEEPROM?NWK
+  +--> ?PR?_WREEPROM?NWK
+  +--> ?CO?NWK
+
+?PR?SAVEPHONE?NWK                   -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?_ERASEEEPROM?NWK
+  +--> ?PR?_WREEPROM?NWK
+
+?PR?LONGTIME?NWK                    -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?_TCPAPP?GSMFUNC
+  +--> ?PR?RTSDATA?NWK
+  +--> ?PR?_APPEND?GSMFUNC
+  +--> ?PR?RXTIMEOVER?NWK
+
+?PR?RTSDATA?NWK                     -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?RXTIMEOVER?NWK                  -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?_TCPAPP?GSMFUNC
+  +--> ?PR?_NEXTSEND?NWK
+
+?PR?_NEXTSEND?NWK                   -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?_QUEUEPRO?GSMFUNC
+
+?PR?_QUEUEPRO?GSMFUNC               -----    -----      -----    -----      00B1H    0001H      -----    -----
+
+?PR?RDWARN?NWK                      0029H.4  0000H.2    002CH    0002H      -----    -----      -----    -----
+  +--> ?PR?RTSDATA?NWK
+  +--> ?CO?NWK
+  +--> ?PR?_TCPAPP?GSMFUNC
+
+?PR?TXDPROCESS?NWK                  -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?PR?SMS_CS_LOAD?NWK
+  +--> ?PR?SMS_CY_LOAD?NWK
+  +--> ?PR?SMS_CH_LOAD?NWK
+  +--> ?PR?SMS_CL_LOAD?NWK
+  +--> ?PR?SMS_CP_LOAD?NWK
+  +--> ?PR?SMS_CM_LOAD?NWK
+  +--> ?PR?SMS_OFF_LOAD?NWK
+  +--> ?PR?SMS_ON_LOAD?NWK
+  +--> ?PR?SMS_WH_LOAD?NWK
+  +--> ?PR?SMSWARNLOAD?NWK
+  +--> ?PR?SMSRTSDATLOAD?NWK
+  +--> ?PR?_APPEND?GSMFUNC
+  +--> ?PR?_LOADSENDSMS?GSMFUNC
+  +--> ?PR?LOADTCPDAT?NWK
+  +--> ?PR?NEXTTCP?GSMFUNC
+
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 6
+
+
+?PR?SMS_CS_LOAD?NWK                 -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_LOADSMSRTSDATA?NWK
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?_LOADSMSRTSDATA?NWK             -----    -----      002DH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?_MSGBUF?NWK                     -----    -----      0030H    0006H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?SMS_CY_LOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_CH_LOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_CL_LOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_CP_LOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_CM_LOAD?NWK                 -----    -----      002CH    0002H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_OFF_LOAD?NWK                -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_ON_LOAD?NWK                 -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMS_WH_LOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMSWARNLOAD?NWK                 -----    -----      002CH    0001H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 7
+
+
+  +--> ?PR?_LOADSMSRTSDATA?NWK
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?SMSRTSDATLOAD?NWK               -----    -----      -----    -----      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_LOADSMSRTSDATA?NWK
+  +--> ?PR?_MSGBUF?NWK
+
+?PR?_LOADSENDSMS?GSMFUNC            -----    -----      002CH    0006H      00AFH    0006H      0BE1H    000FH
+  +--> ?PR?_CHRSWAP?GSMFUNC
+  +--> ?PR?_STRCHRNUM?GSMFUNC
+  +--> ?CO?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_STRUNICODE?GSMFUNC
+  +--> ?PR?_APPEND?GSMFUNC
+
+?PR?_CHRSWAP?GSMFUNC                -----    -----      0032H    0003H      00B5H    0004H      -----    -----
+
+?PR?_STRCHRNUM?GSMFUNC              -----    -----      -----    -----      00B5H    0002H      -----    -----
+
+?PR?_STRUNICODE?GSMFUNC             -----    -----      0032H    0006H      00B5H    0004H      -----    -----
+  +--> ?CO?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?CO?NWK
+
+?PR?LOADTCPDAT?NWK                  0029H.4  0000H.1    -----    -----      -----    -----      0BE1H    0005H
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?RTSDATA?NWK
+  +--> ?PR?_DATAPACK?NWK
+
+?PR?_DATAPACK?NWK                   -----    -----      002CH    0002H      -----    -----      -----    -----
+  +--> ?CO?NWK
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?RXDPRO?GSMFUNC                  -----    -----      -----    -----      00AFH    0001H      -----    -----
+  +--> ?CO?GSMFUNC
+  +--> ?PR?_FINDSTRING?GSMFUNC
+  +--> ?PR?_QUEUEPRO?GSMFUNC
+  +--> ?PR?_GETDIGITALSTR?GSMFUNC
+  +--> ?PR?RDSMSPRO?NWK
+  +--> ?PR?SMSIDSHIFT?GSMFUNC
+  +--> ?PR?_GETSECTION?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?NEXTTCP?GSMFUNC
+  +--> ?PR?_FINDSTR?GSMFUNC
+  +--> ?PR?_SMSIDAPPEND?GSMFUNC
+  +--> ?PR?RXTCPDATAPRO?NWK
+  +--> ?PR?RXUDPDATAPRO?NWK
+  +--> ?PR?_APPEND?GSMFUNC
+
+?PR?_FINDSTRING?GSMFUNC             -----    -----      0037H    0007H      00B6H    0004H      -----    -----
+  +--> ?CO?GSMFUNC
+
+?PR?_GETDIGITALSTR?GSMFUNC          -----    -----      0030H    0007H      00B0H    0003H      -----    -----
+
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 8
+
+
+?PR?RDSMSPRO?NWK                    -----    -----      002CH    0004H      -----    -----      0BE1H    000FH
+  +--> ?CO?NWK
+  +--> ?PR?_FINDSTRING?GSMFUNC
+  +--> ?PR?_GETDIGITALSTR?GSMFUNC
+  +--> ?PR?_GETSMSMSG?GSMFUNC
+  +--> ?PR?_LEN?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MSGBUF?NWK
+  +--> ?PR?RTSDATA?NWK
+  +--> ?PR?_ERASEEEPROM?NWK
+  +--> ?PR?_WREEPROM?NWK
+
+?PR?_GETSMSMSG?GSMFUNC              -----    -----      0030H    0003H      00B0H    0004H      -----    -----
+  +--> ?CO?GSMFUNC
+  +--> ?PR?_FINDSTRING?GSMFUNC
+
+?PR?_LEN?GSMFUNC                    -----    -----      0036H    0003H      00B6H    0002H      -----    -----
+
+?PR?SMSIDSHIFT?GSMFUNC              -----    -----      -----    -----      00B1H    0001H      -----    -----
+
+?PR?_GETSECTION?GSMFUNC             -----    -----      002CH    000BH      00B0H    0006H      -----    -----
+  +--> ?CO?GSMFUNC
+  +--> ?PR?_FINDSTRING?GSMFUNC
+
+?PR?_FINDSTR?GSMFUNC                -----    -----      002CH    000AH      00B0H    0006H      -----    -----
+  +--> ?PR?_LEN?GSMFUNC
+
+?PR?_SMSIDAPPEND?GSMFUNC            -----    -----      002CH    0002H      00B0H    0001H      -----    -----
+  +--> ?PR?SMSIDSHIFT?GSMFUNC
+  +--> ?CO?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?RXTCPDATAPRO?NWK                0029H.4  0000H.1    -----    -----      -----    -----      0BE1H    0014H
+  +--> ?CO?NWK
+  +--> ?PR?_FINDSTRING?GSMFUNC
+  +--> ?PR?_GETDIGITALSTR?GSMFUNC
+  +--> ?PR?_GETSTR?NWK
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_GETHEX?NWK
+  +--> ?PR?_GETBREAK?NWK
+  +--> ?PR?_TCPAPP?GSMFUNC
+  +--> ?PR?_LEN?GSMFUNC
+
+?PR?_GETSTR?NWK                     -----    -----      002CH    0004H      -----    -----      -----    -----
+
+?PR?_GETHEX?NWK                     0029H.5  0000H.1    002CH    0006H      -----    -----      -----    -----
+  +--> ?PR?_DIGLEN?NWK
+  +--> ?CO?NWK
+
+?PR?_GETBREAK?NWK                   -----    -----      002CH    0007H      -----    -----      -----    -----
+  +--> ?PR?_LEN?GSMFUNC
+
+?PR?TXDLOAD?GSMFUNC                 -----    -----      -----    -----      00AFH    0002H      -----    -----
+  +--> ?PR?_NEXTSEND?NWK
+  +--> ?PR?_APPEND?GSMFUNC
+  +--> ?CO?GSMFUNC
+  +--> ?PR?PRINTF?PRINTF
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 9
+
+
+  +--> ?CO?NWK
+  +--> ?PR?_LEN?GSMFUNC
+
+
+
+SYMBOL TABLE OF MODULE:  NWK380-01-22MHz (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C?FPDIV
+  C:27FAH         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:28A1H         PUBLIC        ?C?FCASTC
+  C:289CH         PUBLIC        ?C?FCASTI
+  C:2897H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:0038H         PUBLIC        ?_PRINTF?BYTE
+  D:0038H         PUBLIC        ?_SPRINTF?BYTE
+  C:765EH         PUBLIC        _PRINTF
+  C:7658H         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?FPROUND
+  C:291FH         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:294EH         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPADD
+  C:2A58H         PUBLIC        ?C?FPADD
+  C:2A54H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:2B49H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FTNPWR
+  C:2C7FH         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:2CBFH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:2CD8H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+BL51 BANKED LINKER/LOCATER V6.00                                                      06/03/2017  08:39:58  PAGE 10
+
+
+  C:2D05H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?CSTOPTR
+  C:2D17H         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+  -------         MODULE        ?C?IMUL
+  C:2D39H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?UIDIV
+  C:2D4BH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?IILDX
+  C:2DA0H         PUBLIC        ?C?IILDX
+  -------         ENDMOD        ?C?IILDX
+
+  -------         MODULE        ?C?ILDPTR
+  C:2DB6H         PUBLIC        ?C?ILDPTR
+  -------         ENDMOD        ?C?ILDPTR
+
+  -------         MODULE        ?C?LMUL
+  C:2DE1H         PUBLIC        ?C?LMUL
+  -------         ENDMOD        ?C?LMUL
+
+  -------         MODULE        ?C?ULDIV
+  C:2E6CH         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+  -------         MODULE        ?C?LNEG
+  C:2EFEH         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?OFFXADD
+  C:2F0CH         PUBLIC        ?C?OFFXADD
+  -------         ENDMOD        ?C?OFFXADD
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:2F18H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:2F28H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:B3A4H         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        ?C?STRCMP
+  C:30D6H         PUBLIC        ?C?STRCMP
+  -------         ENDMOD        ?C?STRCMP
+
+Program Size: data=184.0 xdata=3061 code=46180
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
